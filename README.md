@@ -5,7 +5,7 @@
 Dx29 Bioentity
 ==============================================================================================================================================
 
-[![Build Status](https://f29.visualstudio.com/Dx29%20v2/_apis/build/status/DEV-MICROSERVICES/Dx29.BioNET?branchName=develop)](https://f29.visualstudio.com/Dx29%20v2/_build/latest?definitionId=110&branchName=develop)
+[![Build Status](https://f29.visualstudio.com/Dx29%20v2/_apis/build/status/DEV-MICROSERVICES/Dx29.BioEntity?branchName=develop)](https://f29.visualstudio.com/Dx29%20v2/_build/latest?definitionId=72&branchName=develop)
 
 ### **Overview**
 
