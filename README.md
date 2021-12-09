@@ -45,7 +45,7 @@ We use [Visual Studio 2019](https://docs.microsoft.com/en-GB/visualstudio/ide/qu
 
 ####  3. Latest releases
 
-The latest release of the project deployed in the [Dx29 application](https://dx29.ai/) is: v0.15.00.
+The latest release of the project deployed in the [Dx29 application](https://dx29.ai/) is: v0.15.01.
 
 <p>&nbsp;</p>
 
@@ -53,7 +53,8 @@ The latest release of the project deployed in the [Dx29 application](https://dx2
 
 **Conditions or diseases** 
 >- Describe: To obtain information on diseases from a list of IDs and in a given language.
->>- GET request: ```api/v1/Conditions/describe?id=<List<string>>&lang=<lang>```
+>>- GET request
+>>- URL: ```http://localhost/api/v1/Conditions/describe?id=<List<string>>&lang=<lang>```
 >>- Result: Dictionary with key equal to the identifier of the request and value the list of results obtained. This list of results will be composed of objects with the items:
 >>>- Disease Id (string)
 >>>- Disease Name (string)
@@ -67,8 +68,10 @@ The latest release of the project deployed in the [Dx29 application](https://dx2
 >>>- ToString method for printing the disease as: "Id: Name".
 **Phenotype** 
 >- Describe: To obtain information on phenotypes from a list of IDs and in a given language.
->>- GET request: ```api/v1/Phenotypes/describe?id=<List<string>>&lang=<lang>```
->>- POST request:  ```api/v1/Phenotypes/describe?lang=<lang>```
+>>- GET request
+>>- GET URL: ```http://localhost/api/v1/Phenotypes/describe?id=<List<string>>&lang=<lang>```
+>>- POST request
+>>- POST URL: ```http://localhost/api/v1/Phenotypes/describe?lang=<lang>```
 >>- Body request: List symptom identifiers (strings).
 >>- Result: Dictionary with key equal to the identifier of the request and value the list of results obtained. This list of results will be composed of objects with the items:
 >>>- Symptom Id (string)
@@ -82,15 +85,16 @@ The latest release of the project deployed in the [Dx29 application](https://dx2
 >>>- IsObsolete (bool) and ReplacedBy (Reference of the new Symptom with its Id and Name).
 >>>- ToString method for printing the symptom as: "Id: Name".
 >- Predecessors: Get the predeccesors of a symptom with configurable tree depth (-1 is equal to ALL predecessors of a symptom in the tree).
->>- GET request: ```api/v1/Phenotypes/predecessors?<List<string>>&depth=<int_depth>```
->>- POST request: ```api/v1/Phenotypes/predecessors?depth=<int_depth>```
+>>- Both GET and POST request are available
+>>- GET URL: ```http://localhost/api/v1/Phenotypes/predecessors?<List<string>>&depth=<int_depth>```
+>>- POST URL: ```http://localhost/api/v1/Phenotypes/predecessors?depth=<int_depth>```
 >>- Body request: List symptom identifiers (strings).
 >>- Result request: Dictionary with key equal to the identifier of the request and value is an object with the predecessors information.
 **Terms** 
 >- Describe: To obtain information on diseases or symptoms regardless of type, from a list of IDs and in a given language.
 >>- Both GET and POST request are available.
->>>- GET Request: ```api/v1/Terms/describe?id=<List<string>>&lang=<lang>```
->>>- POST Request:```api/v1/Terms/describe?lang=<lang>```
+>>>- URL GET: ```http://localhost/api/v1/Terms/describe?id=<List<string>>&lang=<lang>```
+>>>- URL POST: ```http://localhost/api/v1/Terms/describe?lang=<lang>```
 >>>- POST body request: List of ids (strings).
 
 <p>&nbsp;</p>
